@@ -1,2 +1,11 @@
-# nhentai-history
- Mark what had browsed on nhentai
+## 这是
+一个 Tampermonkey 脚本
+
+## 它用来
+记录你在 nhentai 上浏览过什么内容：
+
+* 黄色标记：在展示页面上看到过。
+
+* 蓝色标记：点开来看过。
+
+* 绿色标记：下载过。
