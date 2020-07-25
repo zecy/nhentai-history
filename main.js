@@ -29,7 +29,8 @@ const main = () => {
         })
     } else if (document.querySelector('#bigcontainer')) {
         // 在作品页面
-        id = document.querySelector('#cover>a').href.match(/(?!g\/)\d+/g)[0]
+        // url format: /g/123456/1 => split('/') => ["", "g", "123456", "1"]
+        id = document.querySelector('#cover>a').href.split('/')[2]
         if (localStorage.getItem(id)) {
             const className = localStorage.getItem(id)
             if (className != 'downloaded') {
