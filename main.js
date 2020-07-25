@@ -29,10 +29,11 @@ const main = () => {
         })
     } else if (document.querySelector('#bigcontainer')) {
         // 在作品页面
-        // url format: /g/123456/1 => split('/') => ["", "g", "123456", "1"]
-        id = document.querySelector('#cover>a').href.split('/')[2]
+        // url format: https://nhentai.net/g/123456/1/ => split('/') => ["", "g", "123456", "1"]
+        const id = document.querySelector('#cover>a').href.split('/')[4]
         if (localStorage.getItem(id)) {
             const className = localStorage.getItem(id)
+            console.log('shwo the claaName: ' + className)
             if (className != 'downloaded') {
                 localStorage.setItem(id, 'visited')
             }
